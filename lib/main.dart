@@ -61,6 +61,21 @@ class _CirclesWithCurvyLineState extends State<CirclesWithCurvyLine> {
     });
   }
 
+/*
+void generateRandomPositions() {
+  final int seed = 42; // Use a fixed seed for reproducibility
+  final Random seededRandom = Random(seed);
+  
+  for (int i = 0; i < numberOfCircles; i++) {
+    circlePositions.add(Offset(
+      seededRandom.nextDouble() * 300,
+      i * 100.0 + 50.0,
+    ));
+  }
+  circlePositions = circlePositions.reversed.toList();
+}
+*/
+
   void generateRandomPositions() {
     for (int i = 0; i < numberOfCircles; i++) {
       circlePositions.add(Offset(

@@ -137,11 +137,9 @@ class CurvyLinePainter extends CustomPainter {
         var p = circlePositions[i];
 
         if (i == 0) {
-          var p1 = Offset(p.dx, p.dy);
-
+          var p1 = Offset(size.width / 2, size.height);
           var controlPoint1 = Offset(p1.dx, (p1.dy + p.dy) / 2);
           var controlPoint2 = Offset(p.dx, (p1.dy + p.dy) / 2);
-          // path.cubicTo(p.dx, p.dy);
           path.cubicTo(controlPoint1.dx, controlPoint1.dy, controlPoint2.dx,
               controlPoint2.dy, p.dx + 25, p.dy + 25);
         } else {
